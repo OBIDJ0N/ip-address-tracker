@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header_inner">
+        <div class="header_inner-top">
+          <h1 class="header_title">
+            IP Address Tracker
+          </h1>
+          <form class="header_form">
+            <input id="input" type="text" placeholder="Search for any IP address or domain">
+            <button id="submit" type="submit">
+              <img src="images/icon-arrow.svg" alt="submit button">
+            </button>
+          </form>
+        </div>
+        <div class="header_inner-bottom">
+          <div class="header_items">
+            <div class="header_items-item">
+              <p>IP ADDRESS</p>
+              <h1 class="ip-address"></h1>
+            </div>
+            <div class="header_items-item">
+              <p>LOCATION</p>
+              <h1 class="location"></h1>
+            </div>
+            <div class="header_items-item">
+              <p>TIMEZONE</p>
+              <h1 class="timezone"></h1>
+            </div>
+            <div class="header_items-item">
+              <p>ISP</p>
+              <h1 class="isp"></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <footer class="footer">
+    <div id="map"></div>
+  </footer>
+
+
+
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

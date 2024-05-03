@@ -1,0 +1,146 @@
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.header {
+    padding: 1.25rem;
+    background: url(./images/pattern-bg-desktop.png) no-repeat top center / cover;
+    height: 30dvh;
+}
+
+.container {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.header_title {
+    color: white;
+    font-weight: 500;
+    text-align: center;
+}
+
+.header_form {
+    margin: .75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_form input {
+    width: min(500px, 70%);
+    font-size: 1rem;
+    padding: 1rem 1.25rem;
+    border: none;
+    border-top-left-radius: .75rem;
+    border-bottom-left-radius: .75rem;
+    outline: none;
+}
+
+.header_form button {
+    padding: 1.05rem 1.25rem;
+    border: none;
+    border-top-right-radius: .75rem;
+    border-bottom-right-radius: .75rem;
+    background-color: var(--very-dark-gray);
+    cursor: pointer;
+    transition: all .25s ease-in-out;
+}
+
+.header_form button:hover {
+    background-color: var(--dark-gray);
+}
+
+.header_inner-bottom {
+    padding: 25px;
+    background-color: white;
+    border-radius: .75rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 0 1.2rem rgba(0, 0, 0, .25);
+    z-index: 1000;
+}
+
+.header_items {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header_items-item {
+    width: 25%;
+    border-right: 1px solid var(--dark-gray);
+    height: 100%;
+}
+
+.header_items-item:last-child {
+    border-right: none;
+}
+
+.header_items-item p {
+    font-size: .7rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+.header_items-item h1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    font-weight: 500;
+    letter-spacing: .2px;
+    word-wrap: break-word;
+}
+.footer {
+    height: 70dvh;
+}
+#map {
+    height: 100%;
+}
+
+@media(max-width: 768px) {
+    .header_title {
+        font-size: 1.5rem;
+    }
+    .header_form input {
+        width: 100%;
+    }
+    .header_inner-bottom {
+        height: auto;
+
+    }
+    .header_items {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    .header_items-item {
+        width: auto;
+        height: auto;
+        border-right: 0;
+    }
+    .header_items-item h1 {
+        font-size: 1rem;
+    }
+}
